@@ -1,5 +1,31 @@
 components:
-- components: []
+- components:
+  - event_bindings: {change: check_box_1_change}
+    layout_properties: {grid_position: 'OYOFXA,AFZCWP'}
+    name: check_box_1
+    properties: {text: Sichere Eingabe}
+    type: CheckBox
+  - layout_properties: {grid_position: 'HEXDXJ,YYJWXG'}
+    name: label_2
+    properties: {text: 'Username:'}
+    type: Label
+  - layout_properties: {grid_position: 'SWSBMY,FEIFSL'}
+    name: TBUsername
+    properties: {}
+    type: TextBox
+  - layout_properties: {grid_position: 'SJCVEM,ULAANM'}
+    name: label_3
+    properties: {text: 'Passwort:'}
+    type: Label
+  - layout_properties: {grid_position: 'DXMHIC,ZRBRCX'}
+    name: TBPassword
+    properties: {}
+    type: TextBox
+  - event_bindings: {click: BtnLogin_click}
+    layout_properties: {grid_position: 'RGVZEV,VSMOJK'}
+    name: BtnLogin
+    properties: {role: outlined-button, text: Login}
+    type: Button
   layout_properties: {slot: default}
   name: content_panel
   properties: {col_widths: '{}'}
@@ -8,6 +34,10 @@ components:
   name: navbar_links
   properties: {}
   type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {text: Login Page}
+  type: Label
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
