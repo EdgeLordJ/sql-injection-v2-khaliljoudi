@@ -58,7 +58,7 @@ def get_query_params(url):
   accNoNoSpace = "AccountNo"
   query_string = url.split('?')[-1] if '?' in url else ''
   if query_string:
-    query_params = urllib.parse.parse_qs(query_string[-1])
+    query_params = urllib.parse.parse_qs(query_string)
     print(query_params)
     if accNoWithSpaceAfter in query_params:
       return query_params["AccountNo "][0]
