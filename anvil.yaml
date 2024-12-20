@@ -15,8 +15,8 @@ db_schema:
     server: full
     title: Files
 dependencies: []
-name: SQL_Injection_V2
-package_name: SQL_Injection_V2
+name: SQL_Injection_V2_KhalilJoudi
+package_name: SQL_Injection_V2_KhalilJoudi
 renamed: true
 runtime_options:
   client_version: '3'

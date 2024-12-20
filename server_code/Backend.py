@@ -53,11 +53,12 @@ def get_user(username, pwd, secON):
 
 def get_query_params(url):
   # Ich weis nicht ob man das mit den Abständen berücksichtigen sollte, aber habe es trotzdem zum teil
+  # in der url darf kein anderes get property stehen außer AccountNo sonst wird programm verwirrt
   accNoWithSpaceAfter = "AccountNo "
   accNoNoSpace = "AccountNo"
   query_string = url.split('?')[-1] if '?' in url else ''
   if query_string:
-    query_params = urllib.parse.parse_qs(query_string)
+    query_params = urllib.parse.parse_qs(query_string[-1])
     print(query_params)
     if accNoWithSpaceAfter in query_params:
       return query_params["AccountNo "][0]
